@@ -1,0 +1,59 @@
+# MCQ Formatter
+
+This is a Python GUI application that allows you to format raw multiple-choice questions (MCQs) from a plain text file into a clean, standardized format. The application extracts and structures questions that contain exactly **four options** (A-D) and allows you to save the formatted output.
+
+## Features
+
+- Simple GUI built with Tkinter.
+- Detects and formats questions with exactly four options.
+- Supports input via `.txt` files.
+- Saves the formatted output to a new file.
+
+## How It Works
+
+1. Launch the app.
+2. Click **"Select MCQ File"** to upload a raw `.txt` file containing MCQs.
+3. The app scans each question, extracts options using regex, and only includes complete questions with 4 valid options.
+4. Optionally, you can save the formatted questions to a file.
+
+## Input Format Example
+
+1. What is the capital of France?
+(A) Paris (B) London
+(C) Berlin (D) Madrid
+
+
+11. Which elements are noble gases?
+(A) Helium (C) Neon  (B) Oxygen (D) Hydrogen
+
+
+## Output Format Example
+
+1. What is the capital of France?
+(A) Paris
+(B) London
+(C) Berlin
+(D) Madrid
+
+11. Which elements are noble gases?
+(A) Helium
+(B) Oxygen
+(C) Neon
+(D) Hydrogen
+
+
+## Requirements
+
+- Python 3.x
+
+No additional packages required; uses only the built-in `tkinter` and `re` libraries.
+
+## How to Run
+
+1. Make sure you have Python 3 installed.
+2. Save the script as `format_3.py`.
+3. Run the script using:
+
+```bash
+python format_3.py
+
