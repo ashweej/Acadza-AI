@@ -51,7 +51,7 @@ No additional packages required; uses only the built-in `tkinter` and `re` libra
 ## How to Run
 
 1. Make sure you have Python 3 installed.
-2. Save the script as `format_3.py`.
+2. Save the script as `option _formation.py`.
 3. Run the script using:
 
 ```bash
