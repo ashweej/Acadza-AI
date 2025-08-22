@@ -1,0 +1,99 @@
+# MCQ Parser Web App
+
+A FastAPI-based web application to **parse multiple-choice questions (MCQs)** from plain text files and export them in **JSON, TXT, or HTML** format.
+
+## ✨ Features
+- Upload a text file containing MCQs.
+- Automatically extracts questions and options (A–D, Yes/No, True/False).
+- Supports output in:
+  - **JSON** – structured for API/automation
+  - **TXT** – simple plain text
+  - **HTML** – styled question view
+- Inline **preview** after upload.
+- **Download button** to save results in the chosen format.
+
+---
+
+## 📂 Example Input
+```text
+1. What is the capital of France?
+(A) Berlin
+(B) Madrid
+(C) Paris
+(D) Rome
+
+2. Python is a programming language?
+(A) True
+(B) False
+✅ Example Output (JSON)
+json
+Copy
+Edit
+[
+  {
+    "question": "What is the capital of France?",
+    "options": {
+      "A": "Berlin",
+      "B": "Madrid",
+      "C": "Paris",
+      "D": "Rome"
+    }
+  },
+  {
+    "question": "Python is a programming language?",
+    "options": {
+      "A": "True",
+      "B": "False"
+    }
+  }
+]
+🚀 Installation & Usage
+1. Clone the repo
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/mcq-parser.git
+cd mcq-parser
+2. Create a virtual environment (recommended)
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate   # On Linux/Mac
+venv\Scripts\activate      # On Windows
+3. Install dependencies
+bash
+Copy
+Edit
+pip install fastapi uvicorn
+4. Run the app
+bash
+Copy
+Edit
+uvicorn main:app --reload
+By default, the app runs at:
+👉 http://127.0.0.1:8000
+
+🌐 How to Use
+Open the app in your browser.
+
+Upload a .txt file with MCQs.
+
+Select the output format (JSON, TXT, or HTML).
+
+Click Upload.
+
+Preview will appear immediately.
+
+Click ⬇ Download File to save the result.
+
+🛠 Tech Stack
+FastAPI – web framework
+
+Python – parsing & formatting logic
+
+HTML/JS – preview & download handling
+
+📜 License
+MIT License © 2025
+Feel free to use and improve! 🎉
