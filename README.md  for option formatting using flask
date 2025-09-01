@@ -1,0 +1,59 @@
+# 📄 JSONL Question Processor (Flask App)
+
+This project is a simple **Flask web app** for processing `.jsonl` files that contain **QUESTION** and **SOLUTION** text. It automatically converts **options** `(1)(2)(3)(4)` or `(a)(b)(c)(d)` into `(A)(B)(C)(D)`.
+
+---
+
+## ✨ Features
+- Upload `.jsonl` files from your browser  
+- Process content directly in memory  
+- Converts options inside **QUESTION** (always) and **SOLUTION** (only if options exist)  
+- Keeps SOLUTION untouched if it doesn’t contain options  
+- Preview the first 3 processed lines in the browser  
+- Download the final processed `.jsonl` file  
+
+---
+
+## 📂 Example
+
+**Input**
+```json
+{"body":{"messages":[{"role":"user","content":"QUESTION (HTML one-line):\n<p>Which is correct?</p>\n(1) Option one\n(2) Option two\nSOLUTION (HTML one-line):\n<p>(a) Correct answer</p>"}]}}
+Output
+
+json
+Copy code
+{"body":{"messages":[{"role":"user","content":"QUESTION (HTML one-line):\n<p>Which is correct?</p>\n(A) Option one\n(B) Option two\nSOLUTION (HTML one-line):\n<p>(A) Correct answer</p>"}]}}
+🚀 Getting Started
+1. Clone Repository
+bash
+Copy code
+git clone https://github.com/your-username/jsonl-processor.git
+cd jsonl-processor
+2. Install Requirements
+bash
+Copy code
+pip install -r requirements.txt
+3. Run the App
+bash
+Copy code
+python app.py
+App will run at 👉 http://127.0.0.1:5000
+
+📦 Requirements
+Create a requirements.txt with:
+
+nginx
+Copy code
+Flask
+🌐 Usage
+Open the web page in your browser
+
+Upload a .jsonl file
+
+Preview the first 3 processed lines
+
+Download the processed file
+
+📜 License
+MIT License © 2025
